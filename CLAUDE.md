@@ -33,6 +33,12 @@ A collaborative Kanban board application with task management capabilities acros
 - Error boundaries for catching component errors
 - Form validation with clear error messages
 - Keep components focused on a single responsibility
+- Use TaskModal component for all modal dialogs
+- Implement form validation with descriptive error messages
+- Add keyboard navigation support (Escape, Enter key handling)
+- Use status enum consistently: Status.todo, Status.doing, Status.done
+- Ensure all components have appropriate accessibility attributes
+- Add loading states during async operations (isSubmitting pattern)
 
 ## Development Workflow
 
@@ -43,9 +49,11 @@ A collaborative Kanban board application with task management capabilities acros
 ## Testing Strategy
 
 - Jest + React Testing Library for unit and component tests
+- Always use `@testing-library/user-event` over `fireEvent` for simulating user interactions
 - Test component rendering and interactions
 - Test server actions in isolation
 - Aim for critical path coverage over percentage targets
+- Prefer realistic user interactions in tests (clicks, typing, keyboard navigation)
 
 ## Environment Setup
 

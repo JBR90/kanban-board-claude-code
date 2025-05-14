@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import TaskCard from "@/app/(board)/components/TaskCard";
 
 describe("TaskCard", () => {
@@ -48,5 +49,27 @@ describe("TaskCard", () => {
       "id",
       "task-task-1-title"
     );
+  });
+  
+  it("calls onClick when clicked", async () => {
+    const user = userEvent.setup();
+    const handleClick = jest.fn();
+    
+    render(<TaskCard {...defaultProps} onClick={handleClick} />);
+    
+    await user.click(screen.getByRole("article"));
+    
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
+  
+  it("calls onClick when edit button is clicked", async () => {
+    const user = userEvent.setup();
+    const handleClick = jest.fn();
+    
+    render(<TaskCard {...defaultProps} onClick={handleClick} />);
+    
+    await user.click(screen.getByRole("button", { name: /edit task/i }));
+    
+    expect(handleClick).toHaveBeenCalledTimes(1);
   });
 });
