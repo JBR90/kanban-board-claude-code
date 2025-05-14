@@ -33,6 +33,12 @@ A collaborative Kanban board application with task management capabilities acros
 - Error boundaries for catching component errors
 - Form validation with clear error messages
 - Keep components focused on a single responsibility
+- Use TaskModal component for all modal dialogs
+- Implement form validation with descriptive error messages
+- Add keyboard navigation support (Escape, Enter key handling)
+- Use status enum consistently: Status.todo, Status.doing, Status.done
+- Ensure all components have appropriate accessibility attributes
+- Add loading states during async operations (isSubmitting pattern)
 
 ## Development Workflow
 
