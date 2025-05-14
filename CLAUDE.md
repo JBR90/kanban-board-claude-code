@@ -1,80 +1,93 @@
-**IMPORTANT FOR CLAUDE: Reference this file before implementing anything**
-
-# Project: [Project Name]
+# Project: Kanban Board
 
 ## Project Overview
 
-A brief description of the project, its purpose, and key goals.
+A collaborative Kanban board application with task management capabilities across three columns: "To Do", "Doing", and "Done".
 
 ## Tech Stack
 
-- Languages: [list primary languages]
-- Frameworks: [list frameworks]
-- Tools: [list tools]
+- **Languages**: TypeScript
+- **Frameworks**: Next.js 15 (App Router)
+- **Tools**: Prisma, Shadcn UI, Tailwind CSS
 
 ## Code Style & Conventions
 
 ### Import/Module Standards
 
-- [Specify import standards]
+- Group imports by: third-party, internal modules, types
+- Destructure imports when importing multiple items from same module
+- Use absolute imports from project root (no relative paths with multiple levels)
 
 ### Naming Conventions
 
-- [Functions naming convention]
-- [Classes/Components naming convention]
-- [Constants naming convention]
-- [Files naming convention]
+- **Functions**: camelCase, verb-first (e.g., `createTask`, `handleSubmit`)
+- **Classes/Components**: PascalCase (e.g., `TaskCard`, `BoardColumn`)
+- **Constants**: UPPER_SNAKE_CASE for true constants, camelCase for variables
+- **Files**: PascalCase for component files, camelCase for utilities
+- **CSS Classes**: kebab-case via Tailwind utilities
 
 ### Patterns to Follow
 
-- [Key architectural patterns]
-- [Error handling approaches]
-- [Code organisation principles]
+- Server Components by default, use "use client" only when necessary
+- Server Actions for data mutations
+- Error boundaries for catching component errors
+- Form validation with clear error messages
+- Keep components focused on a single responsibility
 
 ## Development Workflow
 
-- Branch strategy
-- Commit message format
-- PR requirements
+- Branch strategy: feature branches from main
+- Commit message format: Conventional Commits (feat:, fix:, docs:, etc.)
+- PR requirements: Pass tests, follow standards in this document
 
 ## Testing Strategy
 
-- Test frameworks
-- Coverage requirements
-- Test naming conventions
+- Jest + React Testing Library for unit and component tests
+- Test component rendering and interactions
+- Test server actions in isolation
+- Aim for critical path coverage over percentage targets
 
 ## Environment Setup
 
-- Required environment variables
-- Setup commands
-- Local development server
+- Required environment variables:
+  - `DATABASE_URL`: PostgreSQL connection string
+  
+- Setup commands:
+```bash
+npm install
+npx prisma generate
+npx prisma migrate dev
+```
 
 ## Common Commands
 
 ```bash
 # Build command
-[command]
+npm run build
 
 # Test command
-[command]
+npm test
 
 # Lint command
-[command]
+npm run lint
 
 # Check command
-[command]
+npm run typecheck
 
 # Development server
-[command]
+npm run dev
 ```
 
 ## Project Structure
 
 Key directories and their purpose:
 
-- `/src` - [description]
-- `/tests` - [description]
-- [other important directories]
+- `/app`: Next.js App Router pages and routes
+- `/app/(board)`: Board-related features and components
+- `/app/api`: API endpoints
+- `/components`: Shared UI components
+- `/lib`: Utility functions and shared code
+- `/prisma`: Database schema and migrations
 
 ## Review Process Guidelines
 
@@ -103,8 +116,13 @@ Before submitting any code, ensure the following steps are completed:
 
 ## Known Issues & Workarounds
 
-Document any current limitations or workarounds Claude should be aware of.
+- None at this time
 
 ## References
 
-Links to relevant external documentation, design docs, or resources.
+- [FUNCTIONAL.md](FUNCTIONAL.md): Detailed functional requirements
+- [ARCHITECTURE.md](ARCHITECTURE.md): Technical architecture details
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Prisma Documentation](https://www.prisma.io/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Shadcn UI Documentation](https://ui.shadcn.com)
