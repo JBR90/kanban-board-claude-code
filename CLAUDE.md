@@ -43,9 +43,11 @@ A collaborative Kanban board application with task management capabilities acros
 ## Testing Strategy
 
 - Jest + React Testing Library for unit and component tests
+- Always use `@testing-library/user-event` over `fireEvent` for simulating user interactions
 - Test component rendering and interactions
 - Test server actions in isolation
 - Aim for critical path coverage over percentage targets
+- Prefer realistic user interactions in tests (clicks, typing, keyboard navigation)
 
 ## Environment Setup
 
