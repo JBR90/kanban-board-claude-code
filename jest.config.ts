@@ -1,21 +1,18 @@
+import { config } from 'process';
 import type { Config } from 'jest';
+import nextJest from 'next/jest';
 
-const config: Config = {
-  // Basic test environment for React components
-  testEnvironment: 'jest-environment-jsdom',
-  // Load setup file with testing-library configuration
+const createJestConfig = nextJest({
+  // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
+  dir: './',
+});
+
+// Add any custom config to be passed to Jest
+const customJestConfig: Config = {
+  // Add more setup options before each test is run
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
-  // Transform files for TypeScript and JSX
-  transform: {
-    '^.+\\.(ts|tsx|js|jsx)$': 'babel-jest'
-  },
-  // Handle module paths/aliases used in Next.js
-  moduleNameMapper: {
-    // Handle CSS imports
-    '^.+\\.(css|sass|scss)$': '<rootDir>/test/styleMock.ts',
-    // Handle Next.js module aliases
-    '^@/(.*)$': '<rootDir>/$1'
-  },
+  // Add custom test environment for React
+  testEnvironment: 'jest-environment-jsdom',
   // Define test patterns
   testMatch: ['**/__tests__/**/*.test.[jt]s?(x)'],
   // Configure coverage collection
@@ -29,4 +26,5 @@ const config: Config = {
   coveragePathIgnorePatterns: ['/node_modules/', '/.next/']
 };
 
-export default config;
+// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+export default createJestConfig(customJestConfig);
