@@ -31,14 +31,14 @@ The application uses PostgreSQL as its database. We use Docker for easy setup an
 1. **Start PostgreSQL with Docker**:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 This will start a PostgreSQL container with:
 - Username: postgres
 - Password: postgres
 - Database: kanban
-- Port: 5432
+- Port: 5433 (mapped to internal container port 5432)
 
 2. **Run Database Migration**:
 
@@ -62,7 +62,7 @@ npm run db:test
 Create a `.env` file in the root directory with:
 
 ```
-DATABASE_URL="postgresql://postgres:postgres@localhost:5432/kanban"
+DATABASE_URL="postgresql://postgres:postgres@localhost:5433/kanban"
 ```
 
 ### Installation Steps

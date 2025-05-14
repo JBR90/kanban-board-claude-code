@@ -9,9 +9,9 @@ if ! docker info > /dev/null 2>&1; then
 fi
 
 # Start Docker Compose if not already running
-if ! docker-compose ps | grep -q postgres; then
+if ! docker compose ps | grep -q postgres; then
   echo "🔄 Starting PostgreSQL container..."
-  docker-compose up -d
+  docker compose up -d
   
   # Wait for PostgreSQL to be ready
   echo "⏳ Waiting for PostgreSQL to be ready..."
