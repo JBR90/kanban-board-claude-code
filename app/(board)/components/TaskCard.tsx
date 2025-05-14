@@ -17,7 +17,7 @@ export default function TaskCard({ title, description, id }: TaskCardProps) {
       </h3>
       
       {description && (
-        <p className="text-sm text-gray-600 line-clamp-3">
+        <p className="text-sm text-gray-700 line-clamp-3">
           {description}
         </p>
       )}
@@ -25,13 +25,13 @@ export default function TaskCard({ title, description, id }: TaskCardProps) {
       <div className="flex items-center justify-between mt-2">
         <div className="flex gap-2">
           <button 
-            className="text-xs text-gray-500 hover:text-gray-700"
+            className="text-xs text-gray-700 hover:text-gray-900 font-medium"
             aria-label="Edit task"
           >
             Edit
           </button>
           <button 
-            className="text-xs text-gray-500 hover:text-red-500"
+            className="text-xs text-gray-700 hover:text-red-600 font-medium"
             aria-label="Delete task"
           >
             Delete

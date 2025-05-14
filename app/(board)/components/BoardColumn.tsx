@@ -23,7 +23,7 @@ export default function BoardColumn({ title, status, children }: BoardColumnProp
       
       <div className="flex flex-col gap-2 flex-1">
         {children || (
-          <div className="flex items-center justify-center h-32 border border-dashed rounded-md border-gray-300 text-gray-500 text-sm">
+          <div className="flex items-center justify-center h-32 border border-dashed rounded-md border-gray-300 text-gray-700 text-sm font-medium">
             No tasks yet
           </div>
         )}
