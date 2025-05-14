@@ -1,7 +1,12 @@
+import BoardPage from "./(board)/page";
+
 export default function Home() {
   return (
     <div>
-      <main></main>
+      <main>
+        <BoardPage />
+      </main>
+
       <footer></footer>
     </div>
   );
