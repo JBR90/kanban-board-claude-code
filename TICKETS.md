@@ -26,7 +26,7 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Connection test script successfully connects to the database
 - README includes database setup instructions
 
-**Definition of Done:** All acceptance criteria are met and verified with working code.
+**Definition of Done:** All acceptance criteria for this ticket are met and verified with working code.
 
 ### B2: Task API - Database Models
 **Assignee:** Azizi  
@@ -47,7 +47,7 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Unit tests verify model constraints
 - Test coverage for model is >90%
 
-**Definition of Done:** All acceptance criteria are met, migration is successful, and all tests pass.
+**Definition of Done:** All acceptance criteria for this ticket are met, migration is successful, and all tests pass.
 
 ### B3: Task API - GET Endpoints and Tests
 **Assignee:** Azizi  
@@ -72,7 +72,7 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Integration tests verify database interaction
 - Test coverage for endpoints is >90%
 
-**Definition of Done:** All acceptance criteria are met and all tests pass.
+**Definition of Done:** All acceptance criteria for this ticket are met and all tests pass.
 
 ### B4: Task API - POST/PUT/DELETE Endpoints and Tests
 **Assignee:** Azizi  
@@ -100,7 +100,7 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Integration tests verify database operations
 - Test coverage for endpoints is >90%
 
-**Definition of Done:** All acceptance criteria are met and all tests pass.
+**Definition of Done:** All acceptance criteria for this ticket are met and all tests pass.
 
 ### B5: Server Actions Implementation and Tests
 **Assignee:** Azizi  
@@ -128,11 +128,11 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Integration tests confirm database state changes
 - Test coverage for server actions is >90%
 
-**Definition of Done:** All acceptance criteria are met and all tests pass.
+**Definition of Done:** All acceptance criteria for this ticket are met and all tests pass.
 
 ## Frontend Tickets
 
-### B6: Project Initialization - Next.js and Core Setup
+### F1: Project Initialization - Next.js and Core Setup
 **Assignee:** Azizi  
 **Description:** Initialize the Next.js project with TypeScript, configure Tailwind CSS, and set up the basic project structure  
 **Deliverables:**
@@ -150,9 +150,9 @@ This document outlines the development tickets for the Kanban Board project, spl
 - `npm run build` completes without errors
 - README includes basic setup instructions
 
-**Definition of Done:** All acceptance criteria are met and verified with working code.
+**Definition of Done:** All acceptance criteria for this ticket are met and verified with working code.
 
-### F1: UI Setup and Component Library
+### F2: UI Setup and Component Library
 **Assignee:** Joe  
 **Description:** Set up UI component libraries and testing infrastructure  
 **Deliverables:**
@@ -160,7 +160,7 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Create placeholder pages
 - Set up Jest and React Testing Library
 
-**Dependencies:** B6  
+**Dependencies:** F1  
 **Acceptance Criteria:**
 - Shadcn UI components can be imported and used
 - Placeholder pages render without errors
@@ -169,9 +169,9 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Component styling follows project standards
 - UI components are accessible
 
-**Definition of Done:** All acceptance criteria are met and verified with working code.
+**Definition of Done:** All acceptance criteria for this ticket are met and verified with working code.
 
-### F2: UI Components - Basic Structure and Tests
+### F3: UI Components - Basic Structure and Tests
 **Assignee:** Joe  
 **Description:** Create and test basic UI components for the board  
 **Deliverables:**
@@ -181,7 +181,7 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Implement basic styling with Tailwind CSS
 - Write unit tests for each component
 
-**Dependencies:** B6, F1  
+**Dependencies:** F1, F2  
 **Acceptance Criteria:**
 - Layout component includes header and main content area
 - BoardColumn component renders with title and placeholder for tasks
@@ -194,9 +194,9 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Unit tests verify component rendering
 - Test coverage for components is >80%
 
-**Definition of Done:** All acceptance criteria are met and all tests pass.
+**Definition of Done:** All acceptance criteria for this ticket are met and all tests pass.
 
-### F3: Task Form Components and Tests
+### F4: Task Form Components and Tests
 **Assignee:** Joe  
 **Description:** Create and test forms for adding and editing tasks  
 **Deliverables:**
@@ -207,7 +207,7 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Write unit tests for form validation
 - Write component tests for form submission logic
 
-**Dependencies:** F2  
+**Dependencies:** F3  
 **Acceptance Criteria:**
 - TaskForm includes fields for title and description
 - EditTaskForm pre-populates with existing task data
@@ -221,9 +221,9 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Component tests verify form submission
 - Test coverage for form components is >80%
 
-**Definition of Done:** All acceptance criteria are met and all tests pass.
+**Definition of Done:** All acceptance criteria for this ticket are met and all tests pass.
 
-### F4: Board Page - Data Integration and Tests
+### F5: Board Page - Data Integration and Tests
 **Assignee:** Joe  
 **Description:** Connect board components to data from backend  
 **Deliverables:**
@@ -247,9 +247,9 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Mock data tests verify component behavior
 - Test coverage for data integration is >80%
 
-**Definition of Done:** All acceptance criteria are met and all tests pass.
+**Definition of Done:** All acceptance criteria for this ticket are met and all tests pass.
 
-### F5: Create Task Functionality and Tests
+### F6: Create Task Functionality and Tests
 **Assignee:** Joe  
 **Description:** Implement and test functionality to create new tasks  
 **Deliverables:**
@@ -260,7 +260,7 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Write tests for form submission
 - Test error handling scenarios
 
-**Dependencies:** F4, B5  
+**Dependencies:** F5, B5  
 **Acceptance Criteria:**
 - "Add Task" button opens the task creation form
 - Form submits data to the createTask server action
@@ -273,9 +273,9 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Tests confirm error states display correctly
 - Test coverage for task creation is >80%
 
-**Definition of Done:** All acceptance criteria are met and all tests pass.
+**Definition of Done:** All acceptance criteria for this ticket are met and all tests pass.
 
-### F6: Edit and Delete Task Functionality and Tests
+### F7: Edit and Delete Task Functionality and Tests
 **Assignee:** Joe  
 **Description:** Implement and test functionality to edit and delete tasks  
 **Deliverables:**
@@ -287,7 +287,7 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Test confirmation dialogs
 - Test error handling scenarios
 
-**Dependencies:** F5  
+**Dependencies:** F6  
 **Acceptance Criteria:**
 - Edit button opens form pre-populated with task data
 - Delete button triggers confirmation dialog
@@ -301,9 +301,9 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Tests confirm dialogs and error states work correctly
 - Test coverage for edit/delete functionality is >80%
 
-**Definition of Done:** All acceptance criteria are met and all tests pass.
+**Definition of Done:** All acceptance criteria for this ticket are met and all tests pass.
 
-### F7: Drag and Drop Implementation and Tests
+### F8: Drag and Drop Implementation and Tests
 **Assignee:** Joe  
 **Description:** Implement and test drag and drop functionality  
 **Deliverables:**
@@ -315,7 +315,7 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Test keyboard accessibility for drag operations
 - Test edge cases (invalid drops, etc.)
 
-**Dependencies:** F6  
+**Dependencies:** F7  
 **Acceptance Criteria:**
 - Tasks can be dragged between columns
 - Visual feedback indicates drag operation in progress
@@ -329,7 +329,7 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Tests confirm keyboard accessibility
 - Test coverage for drag and drop is >80%
 
-**Definition of Done:** All acceptance criteria are met and all tests pass.
+**Definition of Done:** All acceptance criteria for this ticket are met and all tests pass.
 
 ## Integration Tickets
 
@@ -343,7 +343,7 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Test error scenarios and recovery
 - Document test coverage
 
-**Dependencies:** F7, B5  
+**Dependencies:** F8, B5  
 **Acceptance Criteria:**
 - End-to-end tests cover task creation workflow
 - Tests verify task editing functionality
@@ -356,7 +356,7 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Tests run successfully in CI environment (if applicable)
 - Overall test coverage exceeds 80%
 
-**Definition of Done:** All acceptance criteria are met and all integration tests pass.
+**Definition of Done:** All acceptance criteria for this ticket are met and all integration tests pass.
 
 ### I2: Documentation and README
 **Assignee:** Joe & Azizi  
@@ -380,22 +380,22 @@ This document outlines the development tickets for the Kanban Board project, spl
 - Documentation is free of typos and errors
 - Documentation includes troubleshooting section
 
-**Definition of Done:** All acceptance criteria are met and documentation is complete.
+**Definition of Done:** All acceptance criteria for this ticket are met and documentation is complete.
 
 ## Development Timeline
 
 ### Sprint 1: Foundation
-- B1, B6 (Project setup tickets - can be developed in parallel)
-- B2, F1 (Second phase setup - after initial setup)
-- F2 (after B6 and F1)
+- B1, F1 (Project setup tickets - can be developed in parallel)
+- B2, F2 (Second phase setup - after initial setup)
+- F3 (after F1 and F2)
 
 ### Sprint 2: Core Functionality
-- B3, B4, F3 (can be developed in parallel)
-- F4 (after B3 and F3)
+- B3, B4, F4 (can be developed in parallel)
+- F5 (after B3 and F4)
 
 ### Sprint 3: Feature Completion
 - B5
-- F5, F6, F7 (sequential, each building on the previous)
+- F6, F7, F8 (sequential, each building on the previous)
 
 ### Sprint 4: Integration and Polish
 - I1, I2
@@ -410,14 +410,14 @@ This document outlines the development tickets for the Kanban Board project, spl
 - B5: 3-4 hours
 
 ### Frontend
-- B6: 2-3 hours
 - F1: 2-3 hours
-- F2: 3-4 hours
+- F2: 2-3 hours
 - F3: 3-4 hours
 - F4: 3-4 hours
-- F5: 2-3 hours
-- F6: 3-4 hours
-- F7: 4-5 hours
+- F5: 3-4 hours
+- F6: 2-3 hours
+- F7: 3-4 hours
+- F8: 4-5 hours
 
 ### Integration
 - I1: 2-3 hours
